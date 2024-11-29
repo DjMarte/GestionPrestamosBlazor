@@ -98,7 +98,7 @@
     public Deudores Deudor { get; set; } = new Deudores();
     public List<Prestamos> ListaPrestamos { get; set; } = [];
 
-    public string Mensaje = string.Empty;
+    private string Mensaje { get; set; } = string.Empty;
 
     protected override async Task OnInitializedAsync() {
         Cobro = await cobroService.Buscar(CobroId);
